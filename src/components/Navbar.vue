@@ -9,7 +9,7 @@
     <div class="navbar-nav">
         <router-link calss="nav-link" to="/">Home</router-link>
         <router-link calss="nav-link" to="/about">About</router-link>
-        <router-link calss="nav-link" to="/persons">Persons</router-link>
+        <router-link calss="nav-link" to="/persons">Profile</router-link>
     </div>
   </div>
 </div>
