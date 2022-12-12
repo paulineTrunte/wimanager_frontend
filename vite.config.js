@@ -1,3 +1,3 @@
 export default defineConfig({
-    base: '/webtech-frontend/'
+    base: '/wimanager-frontend/'
   })
