@@ -16,10 +16,10 @@ module.exports = {
   },
   overrides: [
    {
-    files: [
-     '*/tests/.{j,t}s?(x)',
-     '/tests/unit//*.spec.{j,t}s?(x)'
-    ],
+    "files": ["*-test.js"],
+    "rules": {
+      "no-restricted-imports": "off"
+    },
     env: {
      jest: true
     }
