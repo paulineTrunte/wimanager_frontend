@@ -14,7 +14,7 @@
        </tr>
        </thead>
        <tbody>
-       <tr v-for="modul in modules" :key="modul.id">
+       <tr v-for="modul in modules" v-bind:key="modul.id">
          <td>{{modul.id}}</td>
          <td>{{modul.semester}}</td>
          <td>{{modul.name}}</td>
