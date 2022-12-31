@@ -1,6 +1,6 @@
 <template>
   <h5>Auf dieser Seite können Sie sich alle Module des Bachelor-Studiengangs Wirtschaftsinformatik in einer Tabelle anzeigen lassen und nach einzelnen Modulen suchen.</h5>
-  <div class="modules">
+  <div id="app" class="container">
     <table class="table table-hover table-striped">
       <thead>
         <th scope="col">Id</th>
@@ -21,7 +21,7 @@
           </tr>
       </thead>
       <tbody>
-      <tr v-for="mod in modules" :key="mod.id">
+      <tr v-for="mod in filteredModules" :key="mod.id">
         <th scope="row">{{mod.id}}</th>
         <td>{{mod.semester}}</td>
         <td>{{mod.modulName}}</td>
@@ -51,11 +51,11 @@ export default {
       },
       sortBy: 'id',
       sortAsc: true,
-      modules: [], 
+      modules: [],
     }
   },
   computed: {
-    mod: function() {
+    filteredModules: function() {
         return this.modules.filter(function(mod) {
                 for(const key in this.search) {
                     const query = this.search[key].trim();
@@ -66,10 +66,7 @@ export default {
                     }
                 }
                 return true;
-        }.bind(this))
-        .slice().sort(function (a, b) {
-            return (this.sortAsc ? 1 : -1)*a[this.sortBy].localeCompare(b[this.sortBy])}.bind(this)
-            );
+        }.bind(this));
     }
   },
   mounted () {
