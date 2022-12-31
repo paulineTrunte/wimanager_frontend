@@ -4,19 +4,24 @@
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/modules">Module</router-link> |
-    <router-link to="/about">About</router-link> 
+    <router-link to="/about">About</router-link>
   </div>
   <router-view/>
 </template>
 
 <script>
 
+import Modul from './views/ModuleView.vue'
 
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    // eslint-disable-next-line vue/no-unused-components
+    Modul
+  }
   }
 
-  
+
 </script>
 
 <style>
