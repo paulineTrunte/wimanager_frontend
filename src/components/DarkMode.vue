@@ -1,6 +1,7 @@
 <template>
-  <button @click="toggle(!isDarkMode)">{{isDarkMode}}</button>
-
+  <div style="width:350px;" align="center">
+    <button @click="toggle(!isDarkMode)" type="button" class="btn btn-outline-dark pull right" >Toggle DarkMode</button>
+  </div>
 </template>
 
 <script>
@@ -29,3 +30,7 @@ export default {
 
 
 </script>
+
+<style>
+
+</style>
