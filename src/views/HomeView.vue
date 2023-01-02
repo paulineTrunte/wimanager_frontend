@@ -1,5 +1,6 @@
 <template>
   <div id="home" class="home">
+    <DarkMode></DarkMode>
     <img alt="htw logo" src="../assets/htw-berlin-323-logo.png" height="60" width="300">
     <h1>Wirtschaftsinformatik-Manager</h1>
     <h4>Die Managing-Anwendung für Deinen Wirtschaftsinformatik-Bachelor an der HTW-Berlin</h4>
@@ -15,9 +16,12 @@
 </template>
 
 <script>
-// @ is an alias to /src
+import DarkMode from '/Users/stevan/webtech/wimanager_frontend/src/components/DarkMode.vue'
 
 export default {
   name: 'HomeView',
+  components: {
+    DarkMode
+  }
 }
 </script>

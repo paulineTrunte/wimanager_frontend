@@ -60,6 +60,15 @@ export default {
 </script>
 
 <style>
+@import '@/styles/light.css';
+@import '@/styles/dark.css';
+
+/* für den DarkMode */
+*{
+  background-color: var(--bg);
+  color: var(--text);
+}
+
 html.dark {
   color-scheme: dark;
 }
@@ -86,4 +95,5 @@ body {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
 </style>
