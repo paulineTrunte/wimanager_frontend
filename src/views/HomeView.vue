@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import DarkMode from '/Users/stevan/webtech/wimanager_frontend/src/components/DarkMode.vue'
+import DarkMode from '../components/DarkMode.vue'
 
 export default {
   name: 'HomeView',
