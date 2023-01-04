@@ -1,21 +1,19 @@
 <template>
- <nav class="navbar navbar-expand navbar-light fixed-top">
-      <div class="container">
-        <a href="#" class="navbar-brand">Home</a>
-        <a href="#" class="navbar-brand">Module</a>
-        <a href="#" class="navbar-brand">About</a>
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a href="#" class="nav-link">Login</a>"
-            </li>"
-            <li class="nav-item">
-              <a href="#" class="nav-link">Sign Up</a>"
-            </li>"
-          </ul>
-        </div>
-      </div>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/modules">Module</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view/>
   </nav>
+
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/modules">Module</router-link> |
+    <router-link to="/about">About</router-link>
+  </div>
+  <router-view/>
 </template>
 
 <script>

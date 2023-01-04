@@ -1,28 +1,27 @@
 <template>
-  <h5>Auf dieser Seite können Sie sich alle Module des Bachelor-Studiengangs Wirtschaftsinformatik in einer Tabelle anzeigen lassen und nach einzelnen Modulen suchen.</h5>
+  <h2>Modul-Übersicht</h2>
+  <h5>Hier kannst du dir alle Module anzeigen lassen und nach verschiedenen Kriterien filtern, um dir die Suche zu erleichtern!</h5>
+  <br>
   <div id="app" class="container">
-    <table class="table table-hover table-striped">
+    <table class="table-bordered table-striped table-hover">
       <thead>
-        <th scope="col">Id</th>
-        <th scope ="col">Semester</th>
-        <th scope ="col">Modulbezeichnung</th>
-        <th scope ="col">Art</th>
-        <th scope ="col">Form</th>
-        <th scope ="col">SWS</th>
-        <th scope ="col">LP</th>
-          <tr>
-            <th><input class="form-control" v-model="search.id" placeholder="Suche ID"> </th>
-            <th><input class="form-control" v-model="search.semester" placeholder="Suche Semester"> </th>
-            <th><input class="form-control" v-model="search.modulName" placeholder="Suche Modulbezeichnung"> </th>
-            <th><input class="form-control" v-model="search.art" placeholder="Suche Art"> </th>
-            <th><input class="form-control" v-model="search.form" placeholder="Suche Form"> </th>
-            <th><input class="form-control" v-model="search.sws" placeholder="Suche SWS"> </th>
-            <th><input class="form-control" v-model="search.lp" placeholder="Suche LP"> </th>
-          </tr>
+      <th scope ="col">Semester</th>
+      <th scope ="col">Modulbezeichnung</th>
+      <th scope ="col">Art</th>
+      <th scope ="col">Form</th>
+      <th scope ="col">SWS</th>
+      <th scope ="col">LP</th>
+      <tr>
+        <th><input class="form-control" v-model="search.semester" placeholder="Suche Semester"> </th>
+        <th><input class="form-control" v-model="search.modulName" placeholder="Suche Modulbezeichnung"> </th>
+        <th><input class="form-control" v-model="search.art" placeholder="Suche Art"> </th>
+        <th><input class="form-control" v-model="search.form" placeholder="Suche Form"> </th>
+        <th><input class="form-control" v-model="search.sws" placeholder="Suche SWS"> </th>
+        <th><input class="form-control" v-model="search.lp" placeholder="Suche LP"> </th>
+      </tr>
       </thead>
       <tbody>
       <tr v-for="mod in filteredModules" :key="mod.id">
-        <th scope="row">{{mod.id}}</th>
         <td>{{mod.semester}}</td>
         <td>{{mod.modulName}}</td>
         <td>{{mod.art}}</td>
@@ -35,9 +34,13 @@
   </div>
 </template>
 
+
 <script>
+
 export default {
   name: 'ModuleView',
+  components: {
+  },
   data () {
     return {
       search: {
@@ -56,17 +59,17 @@ export default {
   },
   computed: {
     filteredModules: function() {
-        return this.modules.filter(function(mod) {
-                for(const key in this.search) {
-                    const query = this.search[key].trim();
-                    if(query.length > 0) {
-                        if(!mod[key].includes(query)) {
-                            return false;
-                        }
-                    }
-                }
-                return true;
-        }.bind(this));
+      return this.modules.filter(function(mod) {
+        for(const key in this.search) {
+          const query = this.search[key].trim();
+          if(query.length > 0) {
+            if(!mod[key].includes(query)) {
+              return false;
+            }
+          }
+        }
+        return true;
+      }.bind(this));
     }
   },
   mounted () {
