@@ -2,22 +2,22 @@
   <h2>Termine</h2>
   <h5>Hier kannst du anstehende Abgaben, Klausuren und wichtige Uni-Termine einsehen und selber welche erstellen!</h5>
   <br>
+  <body>
   <div class="container-fluid">
   <AbgabenRender :abgabe="this.abgabe"></AbgabenRender>
   </div>
   <AbgabenHinzufuegen></AbgabenHinzufuegen>
-</template>
-
+  </body>
+  </template>
 
 <script>
-
 import AbgabenRender from "@/components/AbgabenRender";
 import AbgabenHinzufuegen from "@/components/AbgabenHinzufuegen";
 export default {
   name: 'AbgabeView',
   components: {
-    AbgabenHinzufuegen,
-    AbgabenRender
+    AbgabenRender,
+    AbgabenHinzufuegen
   },
   data () {
     return {
@@ -40,11 +40,9 @@ export default {
       .catch(error => console.log('error', error))
   }
 }
+
 </script>
 
 <style scoped>
-table {
-  margin-left: auto;
-  margin-right: auto;
-}
+
 </style>

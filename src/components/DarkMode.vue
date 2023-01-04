@@ -1,6 +1,6 @@
 <template>
-  <div style="width:350px;" align="center">
-    <button @click="toggle(!isDarkMode)" type="button" class="btn btn-outline-dark pull right" >Toggle DarkMode</button>
+  <div id="butt">
+    <button @click="toggle(!isDarkMode)" type="button" class="butt sticky-button1" >Toggle DarkMode</button>
   </div>
 </template>
 
@@ -32,5 +32,16 @@ export default {
 </script>
 
 <style>
+.sticky-button1 {
+  position: absolute;
+  top:20px;
+  left:20px;
+  padding: 7px 12px;
+  border-radius: 30px;
+}
 
+#butt {
+  font-weight: bold;
+  color: #AE8FFA;
+}
 </style>

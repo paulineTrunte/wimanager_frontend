@@ -2,7 +2,6 @@
   <button class="btn btn-success sticky-button" data-bs-toggle="offcanvas" data-bs-target="#abgabe-create-offcanvas" aria-controls="#abgabe-create-offcanvas">
     <i class="bi bi-abgb-plus-fill"></i>
   </button>
-
   <div class="offcanvas offcanvas-end" tabindex="-1" id="abgabe-create-offcanvas" aria-labelledby="offcanvas-label">
     <div class="offcanvas-header">
       <h5 id="offcanvas-label"> Erstelle eine Nachricht</h5>
@@ -50,4 +49,5 @@ export default {
   border-radius: 30px;
   color: #AE8FFA;
 }
+
 </style>
