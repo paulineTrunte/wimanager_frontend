@@ -2,12 +2,10 @@
   <h2>Termine</h2>
   <h5>Hier kannst du anstehende Abgaben, Klausuren und wichtige Uni-Termine einsehen und selber welche erstellen!</h5>
   <br>
-  <body>
   <div class="container-fluid">
   <AbgabenRender :abgabe="this.abgabe"></AbgabenRender>
   </div>
   <AbgabenHinzufuegen></AbgabenHinzufuegen>
-  </body>
   </template>
 
 <script>
@@ -23,7 +21,7 @@ export default {
     return {
       sortBy: 'frist',
       sortAsc: true,
-      abgabe: [],
+      abgabe: []
     }
   },
   mounted () {
