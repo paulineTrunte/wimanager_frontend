@@ -13,24 +13,31 @@
           <label for="id" class="form-label"> ID des Eintrags</label>
           <input type="number" class="form-control" id="id" v-model="id">
         </div>
+        <div class="mt-5">
+          <button class="btn lila me-3" type="button" @click="deleteAbgabe(id)">Löschen</button>
+        </div>
       </form>
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'AbgabeLoeschen',
-  data () {},
+  data () {
+    return {
+      id: ''
+    }
+  },
   methods: {
-    deletePerson(){
+    deleteAbgabe(id) {
+      const url = "http://localhost:8080/api/v1/abgaben/" + id
       const headers = new Headers()
       headers.append('Content-Type', 'application/json')
-
       const payload = JSON.stringify({
         id: this.id
       })
-
       const requestOptions = {
         method: 'DELETE',
         headers: headers,
@@ -38,8 +45,8 @@ export default {
         redirect: 'follow'
       }
 
-      fetch('http://localhost:8080/api/v1/abgaben', requestOptions)
-        .catch(error => console.log('error', error))
+      fetch(url, requestOptions)
+        .then(() => this.status = 'Delete successful');
     }
   }
 }
@@ -52,6 +59,9 @@ export default {
   right:20px;
   padding: 10px 15px;
   border-radius: 30px;
+  color: #AE8FFA;
+}
+.lila {
   color: #AE8FFA;
 }
 
