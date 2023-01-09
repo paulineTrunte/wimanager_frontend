@@ -11,19 +11,19 @@
       <form class="text-start">
         <div class="mb-3">
           <label for="semester" class="form-label"> Semester</label>
-          <input type="text" class="form-control" id="semester" v-model="semester">
+          <input type="number" class="form-control" id="semester" v-model="semester">
         </div>
         <div class="mb-3">
-          <label for="modul_name" class="form-label"> Modulbezeichnung</label>
-          <input type="text" class="form-control" id="modul_name" v-model="modul_name">
+          <label for="modulName" class="form-label"> Modulbezeichnung</label>
+          <input type="text" class="form-control" id="modulName" v-model="modulName">
         </div>
         <div class="mb-3">
           <label for="frist" class="form-label"> Frist</label>
           <input type="date" class="form-control" id="frist" v-model="frist">
         </div>
         <div class="mb-3">
-          <label for="notification_message" class="form-label"> Nachricht</label>
-          <input type="text" class="form-control" id="notification_message" v-model="notification_message">
+          <label for="notificationMessage" class="form-label"> Nachricht</label>
+          <input type="text" class="form-control" id="notificationMessage" v-model="notificationMessage">
         </div>
         <div class="mt-5">
           <button class="btn btn-primary me-3" type="submit" @click.prevent="createPerson">Submit</button>
@@ -40,26 +40,26 @@ export default {
   data () {
     return {
       semester: '',
-      modul_name: '',
+      modulName: '',
       frist: '',
-      notification_message: ''
+      notificationMessage: ''
     }
   },
   methods: {
     createPerson(){
       console.log(this.semester)
-      console.log(this.modul_name)
+      console.log(this.modulName)
       console.log(this.frist)
-      console.log(this.notification_message)
+      console.log(this.notificationMessage)
 
       const headers = new Headers()
-      headers.append('Conent-Type', 'application/json')
+      headers.append('Content-Type', 'application/json')
 
       const payload = JSON.stringify({
         semester: this.semester,
-        modul_name: this.modul_name,
+        modulName: this.modulName,
         frist: this.frist,
-        notification_message: this.notification_message
+        notificationMessage: this.notificationMessage
       })
 
       const requestOptions = {
