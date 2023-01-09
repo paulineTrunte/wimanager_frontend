@@ -26,8 +26,8 @@
           <input type="text" class="form-control" id="notificationMessage" v-model="notificationMessage">
         </div>
         <div class="mt-5">
-          <button class="btn btn-primary me-3" type="submit" @click.prevent="createPerson">Submit</button>
-          <button class="btn btn-danger" type="reset">Reset</button>
+          <button class="btn lila me-3" type="submit" @click="createPerson">Submit</button>
+          <button class="btn pinkk" type="reset">Reset</button>
         </div>
       </form>
     </div>
@@ -79,11 +79,17 @@ export default {
 <style scoped>
 .sticky-button {
   position: fixed;
-  bottom:20px;
-  right:20px;
+  top:20px;
+  right:75px;
   padding: 10px 15px;
   border-radius: 30px;
   color: #AE8FFA;
+}
+.lila {
+  color: #AE8FFA;
+}
+.pinkk {
+  color: #e69fc7;
 }
 
 </style>
