@@ -3,6 +3,7 @@
   <h5>Hier kannst du dir alle Module anzeigen lassen und nach verschiedenen Kriterien filtern, um dir die Suche zu erleichtern!</h5>
   <br>
   <div id="app" class="container">
+    <th><input class="form-control" v-model="search.modulName" placeholder="Suche Modulbezeichnung"> </th>
     <table class="table-bordered table-striped table-hover">
       <thead>
       <th scope ="col">Semester</th>
@@ -11,14 +12,6 @@
       <th scope ="col">Form</th>
       <th scope ="col">SWS</th>
       <th scope ="col">LP</th>
-      <tr>
-        <th><input class="form-control" v-model="search.semester" placeholder="Suche Semester"> </th>
-        <th><input class="form-control" v-model="search.modulName" placeholder="Suche Modulbezeichnung"> </th>
-        <th><input class="form-control" v-model="search.art" placeholder="Suche Art"> </th>
-        <th><input class="form-control" v-model="search.form" placeholder="Suche Form"> </th>
-        <th><input class="form-control" v-model="search.sws" placeholder="Suche SWS"> </th>
-        <th><input class="form-control" v-model="search.lp" placeholder="Suche LP"> </th>
-      </tr>
       </thead>
       <tbody>
       <tr v-for="mod in filteredModules" :key="mod.id">
@@ -61,7 +54,7 @@ export default {
     filteredModules: function() {
       return this.modules.filter(function(mod) {
         for(const key in this.search) {
-          const query = this.search[key].trim();
+          const query = this.search[key];
           if(query.length > 0) {
             if(!mod[key].includes(query)) {
               return false;

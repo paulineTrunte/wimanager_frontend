@@ -1,14 +1,18 @@
 <template>
-  <button class="btn sticky-button" data-bs-toggle="offcanvas" data-bs-target="#abgabe-create-offcanvas" aria-controls="#abgabe-create-offcanvas">
+  <button class="btn sticky-button" data-bs-toggle="offcanvas" data-bs-target="#abgabe-change-offcanvas" aria-controls="#abgabe-change-offcanvas">
     <i class="bi bi-abgb-plus-fill"></i>
   </button>
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="abgabe-create-offcanvas" aria-labelledby="offcanvas-label">
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="abgabe-change-offcanvas" aria-labelledby="offcanvas-label">
     <div class="offcanvas-header">
-      <h5 id="offcanvas-label"> Erstelle eine Nachricht</h5>
+      <h5 id="offcanvas-label"> Ändere den Nachrichten-Inhalt eines Eintrags</h5>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
       <form class="text-start">
+        <div class="mb-3">
+          <label for="id" class="form-label"> ID des Eintrags</label>
+          <input type="number" class="form-control" id="id" v-model="id">
+        </div>
         <div class="mb-3">
           <label for="semester" class="form-label"> Semester</label>
           <input type="number" class="form-control" id="semester" v-model="semester">
@@ -22,12 +26,11 @@
           <input type="date" class="form-control" id="frist" v-model="frist">
         </div>
         <div class="mb-3">
-          <label for="notificationMessage" class="form-label"> Nachricht</label>
+          <label for="notificationMessage" class="form-label"> Neue Nachricht</label>
           <input type="text" class="form-control" id="notificationMessage" v-model="notificationMessage">
-        </div>
         <div class="mt-5">
-          <button class="btn lila me-3" type="submit" @click="createPerson">Submit</button>
-          <button class="btn pinkk" type="reset">Reset</button>
+          <button class="btn lila me-3" type="button" @click="changeAbgabe(id)">Ändern</button>
+        </div>
         </div>
       </form>
     </div>
@@ -36,9 +39,10 @@
 
 <script>
 export default {
-  name: 'AbgabenHinzufuegen',
+  name: 'AbgabeAendern',
   data () {
     return {
+      id: '',
       semester: '',
       modulName: '',
       frist: '',
@@ -46,16 +50,13 @@ export default {
     }
   },
   methods: {
-    createPerson(){
-      console.log(this.semester)
-      console.log(this.modulName)
-      console.log(this.frist)
-      console.log(this.notificationMessage)
-
+    changeAbgabe(id){
+      const url = "http://localhost:8080/api/v1/abgaben/" + id
       const headers = new Headers()
       headers.append('Content-Type', 'application/json')
 
       const payload = JSON.stringify({
+        id: this.id,
         semester: this.semester,
         modulName: this.modulName,
         frist: this.frist,
@@ -63,14 +64,15 @@ export default {
       })
 
       const requestOptions = {
-        method: 'POST',
+        method: 'PUT',
         headers: headers,
         body: payload,
         redirect: 'follow'
       }
 
-      fetch('http://localhost:8080/api/v1/abgaben', requestOptions)
-        .catch(error => console.log('error', error))
+      fetch(url, requestOptions)
+        .then(() => this.status = 'Change successful')
+        .catch(error => console.log('error', error));
     }
   }
 }
@@ -80,7 +82,7 @@ export default {
 .sticky-button {
   position: fixed;
   top:20px;
-  right:75px;
+  right:100px;
   padding: 10px 15px;
   border-radius: 30px;
   color: #AE8FFA;
