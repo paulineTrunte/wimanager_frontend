@@ -35,6 +35,8 @@
 </template>
 
 <script>
+import fetch from 'node-fetch'
+
 export default {
   name: 'AbgabenHinzufuegen',
   data () {
@@ -46,7 +48,7 @@ export default {
     }
   },
   methods: {
-    createPerson(){
+    createAbgabe(){
       console.log(this.semester)
       console.log(this.modulName)
       console.log(this.frist)
