@@ -6,16 +6,22 @@
   <AbgabenRender :abgabe="this.abgabe"></AbgabenRender>
   </div>
   <AbgabenHinzufuegen></AbgabenHinzufuegen>
+  <AbgabeLoeschen></AbgabeLoeschen>
+  <AbgabeAendern></AbgabeAendern>
   </template>
 
 <script>
 import AbgabenRender from "@/components/AbgabenRender";
 import AbgabenHinzufuegen from "@/components/AbgabenHinzufuegen";
+import AbgabeAendern from "@/components/AbgabeAendern";
+import AbgabeLoeschen from "@/components/AbgabeLoeschen";
 export default {
   name: 'AbgabeView',
   components: {
+    AbgabeAendern,
     AbgabenRender,
-    AbgabenHinzufuegen
+    AbgabenHinzufuegen,
+    AbgabeLoeschen
   },
   data () {
     return {

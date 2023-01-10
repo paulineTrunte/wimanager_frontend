@@ -26,7 +26,7 @@
           <input type="text" class="form-control" id="notificationMessage" v-model="notificationMessage">
         </div>
         <div class="mt-5">
-          <button class="btn lila me-3" type="submit" @click="createPerson">Submit</button>
+          <button class="btn lila me-3" type="submit" @click.prevent="createAbgabe()">Submit</button>
           <button class="btn pinkk" type="reset">Reset</button>
         </div>
       </form>

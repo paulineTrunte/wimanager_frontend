@@ -9,17 +9,20 @@
     </p>
   </div>
   <DarkMode></DarkMode>
+  <RefreshButton></RefreshButton>
   <router-view/>
 </template>
 
 <script>
 
 import DarkMode from './components/DarkMode.vue'
+import RefreshButton from './components/RefreshButton.vue'
 
 export default {
   name: 'app',
   components: {
-    DarkMode
+    DarkMode,
+    RefreshButton
   }
 }
 

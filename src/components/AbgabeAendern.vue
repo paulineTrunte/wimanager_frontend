@@ -14,18 +14,6 @@
           <input type="number" class="form-control" id="id" v-model="id">
         </div>
         <div class="mb-3">
-          <label for="semester" class="form-label"> Semester</label>
-          <input type="number" class="form-control" id="semester" v-model="semester">
-        </div>
-        <div class="mb-3">
-          <label for="modulName" class="form-label"> Modulbezeichnung</label>
-          <input type="text" class="form-control" id="modulName" v-model="modulName">
-        </div>
-        <div class="mb-3">
-          <label for="frist" class="form-label"> Frist</label>
-          <input type="date" class="form-control" id="frist" v-model="frist">
-        </div>
-        <div class="mb-3">
           <label for="notificationMessage" class="form-label"> Neue Nachricht</label>
           <input type="text" class="form-control" id="notificationMessage" v-model="notificationMessage">
         <div class="mt-5">
