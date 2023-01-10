@@ -10,7 +10,7 @@ describe('Testing AboutView', () => {
     expect(wrapper.text()).toMatch('About')
   })
 
-  it('renders generally', () => {
+  it('renders generally', async () => {
     //when
     const wrapper = shallowMount(AboutView)
     

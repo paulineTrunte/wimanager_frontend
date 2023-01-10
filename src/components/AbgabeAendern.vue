@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import fetch from 'node-fetch'
 export default {
   name: 'AbgabeAendern',
   data () {

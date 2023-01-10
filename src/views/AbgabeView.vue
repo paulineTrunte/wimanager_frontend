@@ -17,6 +17,7 @@ import AbgabenHinzufuegen from "@/components/AbgabenHinzufuegen";
 import AbgabeLoeschen from "@/components/AbgabeLoeschen";
 import AbgabeAendern from "@/components/AbgabeAendern";
 import RefreshButton from "@/App";
+import fetch from 'node-fetch'
 export default {
   name: 'AbgabeView',
   components: {
