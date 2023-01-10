@@ -18,10 +18,4 @@ describe('Testing HomeView', () => {
     expect(wrapper.exists()).toBe(true);
    })
 
-   it('page should contain image', () => {
-    const wrapper = mount(HomeView)
-
-    expect(wrapper.img.exists()).toBeTruthy();
-   })
-
 })

@@ -11,6 +11,8 @@
 <script>
 import AbgabenRender from "@/components/AbgabenRender";
 import AbgabenHinzufuegen from "@/components/AbgabenHinzufuegen";
+import fetch from 'node-fetch'
+
 export default {
   name: 'AbgabeView',
   components: {
