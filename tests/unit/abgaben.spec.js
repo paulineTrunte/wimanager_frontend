@@ -4,6 +4,7 @@ import AbgabenRender from '@/components/AbgabenRender'
 import AbgabenHinzufuegen from '@/components/AbgabenHinzufuegen'
 import AbgabeAendern from '@/components/AbgabeAendern'
 import AbgabeLoeschen from '@/components/AbgabeLoeschen'
+import RefreshButton from '@/components/RefreshButton'
 
 describe('Testing AbgabeView', () => {
   it('should show page title', () => {
@@ -54,6 +55,15 @@ describe('Testing AbgabeView', () => {
     // then
     const renderAbgabe = wrapper.findComponent(AbgabenRender)
     expect(renderAbgabe.exists()).toBeTruthy()
+  })
+
+  it('should have RefreshButton component', () => {
+    // when
+    const wrapper = shallowMount(RefreshButton)
+
+    // then
+    const buttonExists = wrapper.findComponent(RefreshButton)
+    expect(buttonExists.exists()).toBeTruthy()
   })
 
 

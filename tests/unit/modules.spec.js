@@ -3,7 +3,7 @@ import ModuleView from '@/views/ModuleView'
 
 
 
-describe('Testing ModuleView', () => {
+describe('Testing ModuleView.vue', () => {
   it('should show page title', () => {
     // when
     const wrapper = shallowMount(ModuleView)
@@ -17,4 +17,7 @@ describe('Testing ModuleView', () => {
     
     expect(wrapper.exists()).toBe(true);
    })
+
 })
+
+  

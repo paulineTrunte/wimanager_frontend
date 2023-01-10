@@ -7,9 +7,9 @@ describe('Testing HomeView', () => {
   it('should show page title', () => {
     // when
     const wrapper = shallowMount(HomeView)
-
+    
     // then
-    expect(wrapper.text()).toMatch('by students for studentsHier habt Ihr die Möglichkeit euer Wirtschaftsinformatik-Studium ein wenig zu managen, eure Mitstudenten  über Fristen zu informieren und euch eigene Tasks aufzuschreiben!(◕‿◕) Quasi ein Online-Uni-Notizbuch (◕‿◕)')
+    expect(wrapper.text()).toMatch('by students for studentsHier habt Ihr die Möglichkeit euer Wirtschaftsinformatik-Studium zu managen, eure Kommillitonen  über allgemein geltende Fristen eurer Module zu informieren und eigene Tasks anzulegen!(◕‿◕) Quasi ein Online-Uni-Notizbuch (◕‿◕)')
   })
 
   it('renders generally', async () => {

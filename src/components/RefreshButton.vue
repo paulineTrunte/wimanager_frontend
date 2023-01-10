@@ -1,6 +1,6 @@
 <template>
   <div id="butt">
-    <button @click="this.$router.go()" type="button" class="butt sticky-button2" >Refresh</button>
+    <button @click="this.$router.go()" type="button" class="butt sticky-button2" >✧ Refresh ✧</button>
   </div>
 </template>
 
