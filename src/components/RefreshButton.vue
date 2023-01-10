@@ -1,18 +1,11 @@
 <template>
   <div id="butt">
-    <button @click="reloadPage" type="button" class="butt sticky-button2" >Refresh</button>
+    <button @click="this.$router.go()" type="button" class="butt sticky-button2" >Refresh</button>
   </div>
 </template>
 
 
 <script>
-export default {
-    methods: {
-  reloadPage() {
-    window.location.reload();
-  }
-}
-}
 </script>
 
 <style scoped>
