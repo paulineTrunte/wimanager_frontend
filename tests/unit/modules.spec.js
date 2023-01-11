@@ -14,7 +14,7 @@ describe('Testing ModuleView', () => {
 
   it('renders generally', () => {
     const wrapper = mount(ModuleView)
-    
+
     expect(wrapper.exists()).toBe(true);
    })
 })
