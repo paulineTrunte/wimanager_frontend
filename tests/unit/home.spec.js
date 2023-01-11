@@ -12,7 +12,7 @@ describe('Testing HomeView', () => {
     expect(wrapper.text()).toMatch('by students for studentsHier habt Ihr die Möglichkeit euer Wirtschaftsinformatik-Studium ein wenig zu managen, eure Mitstudenten  über Fristen zu informieren und euch eigene Tasks aufzuschreiben!(◕‿◕) Quasi ein Online-Uni-Notizbuch (◕‿◕)')
   })
 
-  it('renders generally', () => {
+  it('renders generally', async () => {
     const wrapper = shallowMount(HomeView)
 
     expect(wrapper.exists()).toBe(true);
