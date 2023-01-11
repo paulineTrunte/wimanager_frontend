@@ -10,11 +10,12 @@ describe('Testing AboutView', () => {
     expect(wrapper.text()).toMatch('About')
   })
 
-  it('renders generally', async () => {    //when
+  it('renders generally', async () => {
+    //when
     const wrapper = shallowMount(AboutView)
 
     //then
     expect(wrapper.exists()).toBe(true);
-   })
+  })
 
 })

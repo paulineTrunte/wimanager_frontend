@@ -16,5 +16,6 @@ describe('Testing ModuleView.vue', () => {
     const wrapper = shallowMount(ModuleView)
 
     expect(wrapper.exists()).toBe(true);
-   })
+  })
+
 })

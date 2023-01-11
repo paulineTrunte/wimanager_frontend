@@ -6,7 +6,6 @@ import AbgabeAendern from '@/components/AbgabeAendern'
 import AbgabeLoeschen from '@/components/AbgabeLoeschen'
 import RefreshButton from '@/components/RefreshButton'
 
-
 describe('Testing AbgabeView', () => {
   it('should show page title', () => {
     // when
@@ -20,7 +19,7 @@ describe('Testing AbgabeView', () => {
     const wrapper = shallowMount(AbgabeView)
 
     expect(wrapper.exists()).toBe(true);
-   })
+  })
 
   it('should have AbgabenHinzufuegen component', () => {
     // when
@@ -30,7 +29,6 @@ describe('Testing AbgabeView', () => {
     const addAbgabe = wrapper.findComponent(AbgabenHinzufuegen)
     expect(addAbgabe.exists()).toBeTruthy()
   })
-
 
   it('should have AbgabenAendern component', () => {
     // when
