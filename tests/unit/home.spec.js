@@ -9,7 +9,7 @@ describe('Testing HomeView', () => {
     const wrapper = shallowMount(HomeView)
 
     // then
-    expect(wrapper.text()).toMatch('by students for studentsHier habt Ihr die Möglichkeit euer Wirtschaftsinformatik-Studium zu managen, eure Kommillitonen  über allgemein geltende Fristen eurer Module zu informieren und eigene Tasks anzulegen!(◕‿◕) Quasi ein Online-Uni-Notizbuch (◕‿◕)')
+    expect(wrapper.text()).toMatch('by students for studentsHier habt Ihr die Möglichkeit euer Wirtschaftsinformatik-Studium zu managen, eure Kommilitonen  über allgemein geltende Fristen eurer Module zu informieren und eigene Tasks anzulegen!(◕‿◕) Quasi ein Online-Uni-Notizbuch (◕‿◕)')
   })
 
   it('renders generally', async () => {
