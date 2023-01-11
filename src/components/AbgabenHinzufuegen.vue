@@ -1,6 +1,7 @@
 <template>
   <button class="btn sticky-button" data-bs-toggle="offcanvas" data-bs-target="#abgabe-create-offcanvas" aria-controls="#abgabe-create-offcanvas">
     <i class="bi bi-abgb-plus-fill"></i>
+    +
   </button>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="abgabe-create-offcanvas" aria-labelledby="offcanvas-label">
     <div class="offcanvas-header">
@@ -82,7 +83,7 @@ export default {
 .sticky-button {
   position: fixed;
   top:20px;
-  right:75px;
+  right:160px;
   padding: 10px 15px;
   border-radius: 30px;
   color: #AE8FFA;

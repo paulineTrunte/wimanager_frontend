@@ -1,6 +1,6 @@
 <template>
-  <div class="card pinkk">
     <div class="col" v-for="abgb in abgabe" :key="abgb.id">
+      <div class="card pinkk">
       <div class="card-header lilaSchrift">Bis {{abgb.frist}}</div>
         <div class="card-body">
         <h5 class="card-title">Semester {{abgb.semester}} - {{abgb.modulName}}</h5>

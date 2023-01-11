@@ -1,6 +1,7 @@
 <template>
   <button class="btn sticky-button" data-bs-toggle="offcanvas" data-bs-target="#abgabe-delete-offcanvas" aria-controls="#abgabe-delete-offcanvas">
     <i class="bi bi-abgb-plus-fill"></i>
+    -
   </button>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="abgabe-delete-offcanvas" aria-labelledby="offcanvas-label">
     <div class="offcanvas-header">
@@ -14,7 +15,7 @@
           <input type="number" class="form-control" id="id" v-model="id">
         </div>
         <div class="mt-5">
-          <button class="btn lila me-3" type="button" @click="deleteAbgabe(id)">Löschen</button>
+          <button class="btn lila me-3" type="submit" @click="deleteAbgabe(id)">Löschen</button>
         </div>
       </form>
     </div>

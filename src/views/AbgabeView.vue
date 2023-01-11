@@ -8,7 +8,6 @@
   <AbgabenHinzufuegen></AbgabenHinzufuegen>
   <AbgabeLoeschen></AbgabeLoeschen>
   <AbgabeAendern></AbgabeAendern>
-  <RefreshButton></RefreshButton>
   </template>
 
 <script>
@@ -16,11 +15,9 @@ import AbgabenRender from "@/components/AbgabenRender";
 import AbgabenHinzufuegen from "@/components/AbgabenHinzufuegen";
 import AbgabeLoeschen from "@/components/AbgabeLoeschen";
 import AbgabeAendern from "@/components/AbgabeAendern";
-import RefreshButton from "@/App";
 export default {
   name: 'AbgabeView',
   components: {
-    RefreshButton,
     AbgabeAendern,
     AbgabeLoeschen,
     AbgabenRender,
